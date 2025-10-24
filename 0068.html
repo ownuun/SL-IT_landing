@@ -118,6 +118,59 @@
                 transform: translateX(-50%);
             }
         }
+
+        /* Manifesto section enhancements */
+        #manifesto {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle interactive glow background that follows mouse */
+        #manifesto::before {
+            content: "";
+            position: absolute;
+            inset: -10%;
+            background:
+                radial-gradient(600px 600px at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.06), transparent 60%),
+                radial-gradient(800px 400px at 20% 120%, rgba(0, 219, 222, 0.06), transparent 70%),
+                radial-gradient(600px 600px at 80% -20%, rgba(255, 0, 135, 0.06), transparent 70%);
+            filter: blur(20px);
+            pointer-events: none;
+            z-index: 0;
+            transition: background-position 0.15s ease-out;
+        }
+
+        .manifesto-headline {
+            letter-spacing: -0.02em;
+            line-height: 0.95;
+        }
+
+        .manifesto-lead, .manifesto-body {
+            line-height: 1.7;
+        }
+
+        .manifesto-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+        }
+
+        /* Simple typing caret for the word CREATE. */
+        .typed-caret::after {
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 1em;
+            margin-left: 2px;
+            background: currentColor;
+            animation: caret-blink 1s steps(1, end) infinite;
+            vertical-align: -0.1em;
+        }
+
+        @keyframes caret-blink {
+            50% {
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 
@@ -159,12 +212,34 @@
         </section>
 
         <!-- 2. Manifesto Section -->
-        <section id="manifesto" class="min-h-screen w-full flex items-center justify-center py-20 md:py-40">
-            <div class="container mx-auto px-6 text-center">
-                <p class="manifesto-text text-2xl md:text-4xl lg:text-6xl leading-tight font-syncopate font-bold">
-                    SL:IT turns possibility into reality. We observe, measure, and collapse the world in the direction
-                    we choose. We don't wait - we create.
+        <section id="manifesto" class="min-h-screen w-full flex items-center justify-center py-24 md:py-40">
+            <div class="container mx-auto px-6 text-center relative z-10 max-w-5xl">
+                <!-- Main headline: priority focus -->
+                <h1 class="manifesto-headline font-syncopate font-bold text-[clamp(2.5rem,9vw,9rem)]">
+                    WE DON'T WAIT — WE <span id="typed-word" data-text="CREATE." class="inline-block">CREATE.</span>
+                </h1>
+
+                <!-- Breathing space divider -->
+                <div class="manifesto-divider w-24 mx-auto mt-10 md:mt-12"></div>
+
+                <!-- Supporting copy: secondary hierarchy -->
+                <p class="manifesto-lead mt-10 text-neutral-300 text-xl md:text-2xl">
+                    SL:IT turns possibility into reality.
                 </p>
+                <p class="manifesto-body mt-6 text-neutral-400 text-base md:text-xl">
+                    We observe, measure, and collapse the world in the direction we choose.
+                </p>
+
+                <!-- Keyword row as light visual anchors -->
+                <div class="mt-10 md:mt-14 flex items-center justify-center gap-4 text-xs md:text-sm tracking-widest font-syncopate text-neutral-400">
+                    <span class="opacity-80">OBSERVE</span>
+                    <span class="w-1 h-1 rounded-full bg-neutral-600 inline-block"></span>
+                    <span class="opacity-80">MEASURE</span>
+                    <span class="w-1 h-1 rounded-full bg-neutral-600 inline-block"></span>
+                    <span class="opacity-80">COLLAPSE</span>
+                    <span class="w-1 h-1 rounded-full bg-neutral-600 inline-block"></span>
+                    <span class="opacity-80">CREATE</span>
+                </div>
             </div>
         </section>
 
@@ -422,18 +497,68 @@
             gsap.from(".hero-title", { opacity: 0, y: 50, duration: 1, delay: 0.5 });
             gsap.from(".hero-subtitle", { opacity: 0, y: 30, duration: 1, delay: 0.8 });
 
-            // Manifesto Text Reveal
-            const manifestoText = document.querySelector(".manifesto-text");
-            gsap.from(manifestoText, {
-                opacity: 0.2,
-                y: 100,
+            // Manifesto reveal + typing for CREATE.
+            const headline = document.querySelector('.manifesto-headline');
+            const lead = document.querySelector('.manifesto-lead');
+            const body = document.querySelector('.manifesto-body');
+            const typed = document.getElementById('typed-word');
+
+            gsap.from([headline], {
+                opacity: 0,
+                y: 40,
                 duration: 1,
+                ease: 'power3.out',
                 scrollTrigger: {
-                    trigger: "#manifesto",
-                    start: "top 70%",
-                    end: "bottom 80%",
-                    scrub: 1,
+                    trigger: '#manifesto',
+                    start: 'top 70%'
                 }
+            });
+
+            gsap.from([lead, body], {
+                opacity: 0,
+                y: 30,
+                duration: 0.9,
+                stagger: 0.15,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: '#manifesto',
+                    start: 'top 65%'
+                }
+            });
+
+            // Typing effect for the word "CREATE." when manifesto enters
+            if (typed) {
+                const full = typed.getAttribute('data-text') || typed.textContent;
+                ScrollTrigger.create({
+                    trigger: '#manifesto',
+                    start: 'top 70%',
+                    once: true,
+                    onEnter: () => {
+                        typed.textContent = '';
+                        typed.classList.add('typed-caret');
+                        let i = 0;
+                        const typeNext = () => {
+                            if (i <= full.length) {
+                                typed.textContent = full.slice(0, i);
+                                i++;
+                                setTimeout(typeNext, 80);
+                            } else {
+                                typed.classList.remove('typed-caret');
+                            }
+                        };
+                        typeNext();
+                    }
+                });
+            }
+
+            // Subtle interactive glow follows mouse within manifesto
+            const manifesto = document.getElementById('manifesto');
+            manifesto.addEventListener('mousemove', (e) => {
+                const rect = manifesto.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                manifesto.style.setProperty('--mx', `${x}%`);
+                manifesto.style.setProperty('--my', `${y}%`);
             });
 
             // Works Horizontal Scroll
