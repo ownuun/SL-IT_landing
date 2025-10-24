@@ -65,24 +65,6 @@
             overflow: hidden;
         }
 
-        /* Works 섹션 가로 스크롤 컨테이너 */
-        .horizontal-container {
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .panels {
-            height: 100%;
-            width: 300vw;
-            /* 패널 개수에 따라 조정 (3개 * 100vw) */
-            display: flex;
-        }
-
-        .panel {
-            width: 100vw;
-            height: 100vh;
-        }
 
         /* Process 섹션 라인 */
         .timeline-line {
@@ -271,26 +253,8 @@
             </div>
         </section>
 
-        <!-- 3. Works Section (Horizontal Scroll) -->
-        <section id="works" class="horizontal-container">
-            <div class="panels">
-                <div class="panel flex items-center justify-center flex-col gap-4">
-                    <h2 class="font-syncopate text-5xl md:text-7xl font-bold">OUR WORKS</h2>
-                    <p>A Glimpse Into Our Universe</p>
-                </div>
-                <div class="panel p-6 md:p-10 flex items-center justify-center">
-                    <img src="images/works/treedi1.png" class="w-full h-3/4 object-cover rounded-xl" alt="Work 1">
-                </div>
-                <div class="panel p-6 md:p-10 flex items-center justify-center">
-                    <img src="images/works/treedi2.png" class="w-full h-3/4 object-cover rounded-xl" alt="Work 2">
-                </div>
-                <div class="panel p-6 md:p-10 flex items-center justify-center">
-                    <img src="images/works/treedi3.png" class="w-full h-3/4 object-cover rounded-xl" alt="Work 3">
-                </div>
-            </div>
-        </section>
 
-        <!-- 4. Approach Section -->
+        <!-- 3. Approach Section -->
         <section id="approach" class="min-h-screen w-full flex items-center justify-center py-20 md:py-40">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="font-syncopate text-5xl md:text-7xl font-bold mb-16">OUR APPROACH</h2>
@@ -590,36 +554,8 @@
             </div>
         </section>
 
-        <!-- 5. Capabilities Section -->
-        <section id="services" class="min-h-screen w-full flex items-center justify-center py-20 md:py-40">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="font-syncopate text-5xl md:text-7xl font-bold mb-16">CAPABILITIES</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="service-card border border-neutral-800 p-8 rounded-xl text-left">
-                        <h3 class="font-syncopate text-2xl font-bold mb-4">FAST EXECUTION</h3>
-                        <p class="text-neutral-400">We rapidly plan, validate, and create products with lightning-fast
-                            execution power.</p>
-                    </div>
-                    <div class="service-card border border-neutral-800 p-8 rounded-xl text-left">
-                        <h3 class="font-syncopate text-2xl font-bold mb-4">VIBE CODING</h3>
-                        <p class="text-neutral-400">Through trial and error, we experience vibe coding challenges
-                            firsthand and develop better alternatives.</p>
-                    </div>
-                    <div class="service-card border border-neutral-800 p-8 rounded-xl text-left">
-                        <h3 class="font-syncopate text-2xl font-bold mb-4">VIRAL FOCUS</h3>
-                        <p class="text-neutral-400">We specialize in creating viral content like Reels and Shorts that
-                            capture attention instantly.</p>
-                    </div>
-                    <div class="service-card border border-neutral-800 p-8 rounded-xl text-left">
-                        <h3 class="font-syncopate text-2xl font-bold mb-4">INTENSITY</h3>
-                        <p class="text-neutral-400">We gather daily at one location, working an average of 12 hours with
-                            strong organizational power.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- 6. Process Section -->
+        <!-- 4. Process Section -->
         <section id="process" class="w-full py-20 md:py-40 relative">
             <div class="container mx-auto px-6">
                 <h2 class="font-syncopate text-5xl md:text-7xl font-bold text-center mb-24">OUR PROCESS</h2>
@@ -659,7 +595,7 @@
             </div>
         </section>
 
-        <!-- 7. Team Section -->
+        <!-- 5. Team Section -->
         <section id="team" class="min-h-screen w-full flex flex-col items-center justify-center py-20 md:py-40">
             <h2 class="font-syncopate text-5xl md:text-7xl font-bold text-center mb-24">TEAM</h2>
             <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
@@ -723,7 +659,7 @@
             </div>
         </section>
 
-        <!-- 8. Testimonials Section (Marquee) -->
+        <!-- 6. Testimonials Section (Marquee) -->
         <section id="testimonials" class="w-full py-20 md:py-32 overflow-hidden">
             <div class="marquee-container">
                 <div class="marquee-wrapper" id="marqueeWrapper">
@@ -769,7 +705,7 @@
             </div>
         </section>
 
-        <!-- 9. Contact Section -->
+        <!-- 7. Contact Section -->
         <footer id="contact"
             class="min-h-screen w-full flex flex-col items-center justify-center py-20 md:py-40 bg-black">
             <div class="text-center">
@@ -899,21 +835,6 @@
                 manifesto.style.setProperty('--my', `${y}%`);
             });
 
-            // Works Horizontal Scroll
-            const panelsContainer = document.querySelector(".panels");
-            const panels = gsap.utils.toArray(".panel");
-
-            gsap.to(panels, {
-                xPercent: -100 * (panels.length - 1),
-                ease: "none",
-                scrollTrigger: {
-                    trigger: ".horizontal-container",
-                    pin: true,
-                    scrub: 1,
-                    snap: 1 / (panels.length - 1),
-                    end: () => "+=" + panelsContainer.offsetWidth
-                }
-            });
 
             // Approach Section 탭 기능
             const approachTabs = document.querySelectorAll('.approach-tab');
@@ -1003,20 +924,6 @@
                 }
             });
 
-            // Services Card Animation
-            gsap.utils.toArray("#services .service-card").forEach(card => {
-                gsap.from(card, {
-                    opacity: 0,
-                    y: 80,
-                    scale: 0.95,
-                    duration: 0.8,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 85%",
-                        toggleActions: "play none none none"
-                    }
-                });
-            });
 
             // Process Timeline Animation
             gsap.to(".timeline-progress", {
