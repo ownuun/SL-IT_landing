@@ -17,7 +17,7 @@
         rel="stylesheet">
 
     <style>
-        /* 커스텀 폰트 및 기본 스타일 */
+        /* 커스?� ?�트 �?기본 ?��???*/
         body {
             background-color: #0A0A0A;
             color: #EAEAEA;
@@ -30,7 +30,7 @@
             font-family: 'Syncopate', sans-serif;
         }
 
-        /* 커스텀 커서 */
+        /* 커스?� 커서 */
         .cursor {
             position: fixed;
             width: 30px;
@@ -52,7 +52,7 @@
             background-color: #EAEAEA;
         }
 
-        /* Lenis 스크롤바 숨기기 */
+        /* Lenis ?�크롤바 ?�기�?*/
         html.lenis {
             height: auto;
         }
@@ -65,7 +65,7 @@
             overflow: hidden;
         }
 
-        /* Works 섹션 가로 스크롤 컨테이너 */
+        /* Works ?�션 가�??�크�?컨테?�너 */
         .horizontal-container {
             width: 100vw;
             height: 100vh;
@@ -75,7 +75,7 @@
         .panels {
             height: 100%;
             width: 300vw;
-            /* 패널 개수에 따라 조정 (3개 * 100vw) */
+            /* ?�널 개수???�라 조정 (3�?* 100vw) */
             display: flex;
         }
 
@@ -84,7 +84,7 @@
             height: 100vh;
         }
 
-        /* Process 섹션 라인 */
+        /* Process ?�션 ?�인 */
         .timeline-line {
             position: absolute;
             left: 50%;
@@ -117,7 +117,7 @@
             will-change: transform;
         }
 
-        /* Approach Section 탭 스타일 */
+        /* Approach Section ???��???*/
         .approach-tab {
             color: #6B7280;
             background: transparent;
@@ -204,10 +204,10 @@
 
 <body class="bg-[#0A0A0A] text-neutral-100">
 
-    <!-- 커스텀 커서 -->
+    <!-- 커스?� 커서 -->
     <div class="cursor"></div>
 
-    <!-- 헤더 / 네비게이션 -->
+    <!-- ?�더 / ?�비게이??-->
     <header class="fixed top-0 left-0 w-full p-6 md:p-8 z-50">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#hero" class="nav-link">
@@ -244,7 +244,7 @@
             <div class="container mx-auto px-6 text-center relative z-10 max-w-5xl">
                 <!-- Main headline: priority focus -->
                 <h1 class="manifesto-headline font-syncopate font-bold text-[clamp(2.5rem,9vw,9rem)]">
-                    WE DON'T WAIT — WE <span id="typed-word" data-text="CREATE." class="inline-block">CREATE.</span>
+                    WE DON'T WAIT ??WE <span id="typed-word" data-text="CREATE." class="inline-block">CREATE.</span>
                 </h1>
 
                 <!-- Breathing space divider -->
@@ -295,12 +295,12 @@
             <div class="container mx-auto px-6 text-center">
                 <h2 class="font-syncopate text-5xl md:text-7xl font-bold mb-16">OUR APPROACH</h2>
                 <div class="max-w-7xl mx-auto">
-                    <!-- 탭 네비게이션 -->
+                    <!-- ???�비게이??-->
                     <div class="flex justify-center mb-8">
                         <div class="flex items-center bg-neutral-900 rounded-lg p-1">
                             <button class="approach-tab active px-6 py-3 rounded-md text-sm font-syncopate font-bold transition-all duration-300" data-tab="vibe-coding">FAXI</button>
                             
-                            <!-- 화살표 -->
+                            <!-- ?�살??-->
                             <div class="mx-2">
                                 <svg class="w-4 h-4 text-neutral-400" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -309,7 +309,7 @@
                             
                             <button class="approach-tab px-6 py-3 rounded-md text-sm font-syncopate font-bold transition-all duration-300" data-tab="fast-execution">TREEDI</button>
                             
-                            <!-- 화살표 -->
+                            <!-- ?�살??-->
                             <div class="mx-2">
                                 <svg class="w-4 h-4 text-neutral-400" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -320,17 +320,17 @@
                         </div>
                     </div>
                     
-                    <!-- 카드 컨테이너 -->
+                    <!-- 카드 컨테?�너 -->
                     <div class="relative">
                         <div class="approach-card border border-neutral-800 p-16 rounded-xl text-left min-h-[700px] bg-neutral-900/50 backdrop-blur-sm">
                             <!-- VIBE CODING 카드 -->
                             <div class="approach-content active" id="vibe-coding">
                                 <div class="flex gap-8 h-full">
-                                    <!-- 왼쪽 이미지 영역 -->
+                                    <!-- ?�쪽 ?��?지 ?�역 -->
                                     <div class="w-1/2">
-                                        <!-- 이미지 슬라이더 -->
+                                        <!-- ?��?지 ?�라?�더 -->
                                         <div class="relative w-full h-[500px] bg-neutral-700 rounded-lg overflow-hidden mb-6">
-                                            <!-- 이미지 컨테이너 -->
+                                            <!-- ?��?지 컨테?�너 -->
                                             <div class="image-slider flex transition-transform duration-500 ease-in-out h-full">
                                                 <div class="w-full h-full flex-shrink-0">
                                                     <img src="images/works/resize2.webp" alt="FAXI 1" class="w-full h-full object-cover" />
@@ -346,7 +346,7 @@
                                                 </div>
                                             </div>
                                             
-                                            <!-- 네비게이션 화살표 -->
+                                            <!-- ?�비게이???�살??-->
                                             <button class="image-prev absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center transition-colors">
                                                 <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
@@ -358,7 +358,7 @@
                                                 </svg>
                                             </button>
                                             
-                                            <!-- 인디케이터 도트 -->
+                                            <!-- ?�디케?�터 ?�트 -->
                                             <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                                                 <button class="image-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/80 transition-colors active"></button>
                                                 <button class="image-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/80 transition-colors"></button>
@@ -367,7 +367,7 @@
                                             </div>
                                         </div>
                                         
-                                        <!-- 관련 링크들 -->
+                                        <!-- 관??링크??-->
                                         <div class="space-y-3">
                                             <h4 class="font-syncopate text-lg font-bold text-neutral-200 mb-3">Related Links</h4>
                                             <div class="flex flex-wrap gap-3">
@@ -393,7 +393,7 @@
                                         </div>
                                     </div>
                                     
-                                    <!-- 오른쪽 텍스트 영역 -->
+                                    <!-- ?�른�??�스???�역 -->
                                     <div class="w-1/2 flex flex-col justify-center">
                                         <h3 class="font-syncopate text-4xl font-bold mb-8">FAXI</h3>
                                         <div class="space-y-6">
@@ -413,11 +413,11 @@
                             <!-- FAST EXECUTION 카드 -->
                             <div class="approach-content" id="fast-execution">
                                 <div class="flex gap-8 h-full">
-                                    <!-- 왼쪽 이미지 영역 -->
+                                    <!-- ?�쪽 ?��?지 ?�역 -->
                                     <div class="w-1/2">
-                                        <!-- 이미지 슬라이더 -->
+                                        <!-- ?��?지 ?�라?�더 -->
                                         <div class="relative w-full h-[500px] bg-neutral-700 rounded-lg overflow-hidden mb-6">
-                                            <!-- 이미지 컨테이너 -->
+                                            <!-- ?��?지 컨테?�너 -->
                                             <div class="image-slider flex transition-transform duration-500 ease-in-out h-full">
                                                 <div class="w-full h-full flex-shrink-0">
                                                     <img src="images/works/treedi1.png" alt="Treedi 1" class="w-full h-full object-cover" />
@@ -430,7 +430,7 @@
                                                 </div>
                                             </div>
                                             
-                                            <!-- 네비게이션 화살표 -->
+                                            <!-- ?�비게이???�살??-->
                                             <button class="image-prev absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center transition-colors">
                                                 <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
@@ -442,7 +442,7 @@
                                                 </svg>
                                             </button>
                                             
-                                            <!-- 인디케이터 도트 -->
+                                            <!-- ?�디케?�터 ?�트 -->
                                             <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                                                 <button class="image-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/80 transition-colors active"></button>
                                                 <button class="image-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/80 transition-colors"></button>
@@ -450,7 +450,7 @@
                                             </div>
                                         </div>
                                         
-                                        <!-- 관련 링크들 -->
+                                        <!-- 관??링크??-->
                                         <div class="space-y-3">
                                             <h4 class="font-syncopate text-lg font-bold text-neutral-200 mb-3">Related Links</h4>
                                             <div class="flex flex-wrap gap-3">
@@ -476,13 +476,13 @@
                                         </div>
                                     </div>
                                     
-                                    <!-- 오른쪽 텍스트 영역 -->
+                                    <!-- ?�른�??�스???�역 -->
                                     <div class="w-1/2 flex flex-col justify-center">
                                         <h3 class="font-syncopate text-4xl font-bold mb-8">TREEDI</h3>
                                         <div class="space-y-6">
                                             <div>
                                                 <h4 class="font-syncopate text-2xl font-bold mb-3 text-red-400">Problem</h4>
-                                                <p class="text-neutral-300 text-lg leading-relaxed">Learning complex topics in a linear chat is inefficient. When users ask a “drill-down” question, the new answer contaminates the main context. This forces the user to constantly scroll back and forth to regain the high-level picture, which is cumbersome and breaks their flow of thought.</p>
+                                                <p class="text-neutral-300 text-lg leading-relaxed">Learning complex topics in a linear chat is inefficient. When users ask a ?�drill-down??question, the new answer contaminates the main context. This forces the user to constantly scroll back and forth to regain the high-level picture, which is cumbersome and breaks their flow of thought.</p>
                                             </div>
                                             <div>
                                                 <h4 class="font-syncopate text-2xl font-bold mb-3 text-green-400">Solution</h4>
@@ -496,24 +496,24 @@
                             <!-- VIRAL FOCUS 카드 -->
                             <div class="approach-content" id="viral-focus">
                                 <div class="flex gap-8 h-full">
-                                    <!-- 왼쪽 이미지 영역 -->
+                                    <!-- ?�쪽 ?��?지 ?�역 -->
                                     <div class="w-1/2">
-                                        <!-- 이미지 슬라이더 -->
+                                        <!-- ?��?지 ?�라?�더 -->
                                         <div class="relative w-full h-[500px] bg-neutral-700 rounded-lg overflow-hidden mb-6">
-                                            <!-- 이미지 컨테이너 -->
+                                            <!-- ?��?지 컨테?�너 -->
                                             <div class="image-slider flex transition-transform duration-500 ease-in-out h-full">
                                                 <div class="w-full h-full flex-shrink-0 flex items-center justify-center">
-                                                    <span class="text-white text-lg font-bold">사진 1</span>
+                                                    <span class="text-white text-lg font-bold">?�진 1</span>
                                                 </div>
                                                 <div class="w-full h-full flex-shrink-0 flex items-center justify-center">
-                                                    <span class="text-white text-lg font-bold">사진 2</span>
+                                                    <span class="text-white text-lg font-bold">?�진 2</span>
                                                 </div>
                                                 <div class="w-full h-full flex-shrink-0 flex items-center justify-center">
-                                                    <span class="text-white text-lg font-bold">사진 3</span>
+                                                    <span class="text-white text-lg font-bold">?�진 3</span>
                                                 </div>
                                             </div>
                                             
-                                            <!-- 네비게이션 화살표 -->
+                                            <!-- ?�비게이???�살??-->
                                             <button class="image-prev absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center transition-colors">
                                                 <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
@@ -525,7 +525,7 @@
                                                 </svg>
                                             </button>
                                             
-                                            <!-- 인디케이터 도트 -->
+                                            <!-- ?�디케?�터 ?�트 -->
                                             <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                                                 <button class="image-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/80 transition-colors active"></button>
                                                 <button class="image-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/80 transition-colors"></button>
@@ -533,7 +533,7 @@
                                             </div>
                                         </div>
                                         
-                                        <!-- 관련 링크들 -->
+                                        <!-- 관??링크??-->
                                         <div class="space-y-3">
                                             <h4 class="font-syncopate text-lg font-bold text-neutral-200 mb-3">Related Links</h4>
                                             <div class="flex flex-wrap gap-3">
@@ -559,7 +559,7 @@
                                         </div>
                                     </div>
                                     
-                                    <!-- 오른쪽 텍스트 영역 -->
+                                    <!-- ?�른�??�스???�역 -->
                                     <div class="w-1/2 flex flex-col justify-center">
                                         <h3 class="font-syncopate text-4xl font-bold mb-8">ANYON</h3>
                                         <div class="space-y-6">
@@ -575,7 +575,7 @@
                                                 <h4 class="font-syncopate text-2xl font-bold mb-3 text-green-400">Solution</h4>
                                                 <div class="text-neutral-300 text-lg leading-relaxed space-y-3">
                                                     <p>A cloud platform where users collaborate with AI agents through natural language and Kanban interface.</p>
-                                                    <p>Support multiple AI agents—Claude, Cursor, Gemini—while preserving Git version control.</p>
+                                                    <p>Support multiple AI agents?�Claude, Cursor, Gemini?�while preserving Git version control.</p>
                                                     <p>Users define requirements. AI handles implementation.</p>
                                                     <p class="text-xl">Turn everyone into a builder.</p>
                                                 </div>
@@ -727,7 +727,7 @@
         <section id="testimonials" class="w-full py-20 md:py-32 overflow-hidden">
             <div class="marquee-container">
                 <div class="marquee-wrapper" id="marqueeWrapper">
-                    <!-- 로고 세트 -->
+                    <!-- 로고 ?�트 -->
                     <div class="flex items-center gap-48 px-20">
                     <div class="flex items-center gap-4">
                         <img src="images/logos/faxi.jpg" class="h-20 w-auto rounded-lg" alt="FAXI Logo">
@@ -772,13 +772,48 @@
         <!-- 9. Contact Section -->
         <footer id="contact"
             class="min-h-screen w-full flex flex-col items-center justify-center py-20 md:py-40 bg-black">
-            <div class="text-center">
+            <div class="text-center max-w-4xl w-full px-6">
                 <h2 class="font-syncopate text-5xl md:text-7xl lg:text-8xl font-bold">CONTACT US</h2>
-                <p class="mt-4 mb-8 text-neutral-400">Let's create something beyond reality.</p>
-                <a href="mailto:slit.amazing@gmail.com"
-                    class="inline-block bg-white text-black font-syncopate font-bold py-4 px-12 rounded-full text-lg hover:scale-105 transition-transform duration-300">
-                    slit.amazing@gmail.com
-                </a>
+                <p class="mt-4 mb-10 text-neutral-400">Let's create something beyond reality.</p>
+
+                <!-- Contact Form -->
+                <form id="contact-form" class="mx-auto text-left bg-neutral-900/40 border border-neutral-800 rounded-2xl p-6 md:p-10 backdrop-blur-sm"
+                    data-to-email="slit.amazing@gmail.com"
+                    data-emailjs-public-key=""
+                    data-emailjs-service-id=""
+                    data-emailjs-template-id=""
+                    data-gas-endpoint="https://script.google.com/macros/s/AKfycbxb44ArsgjcKmRKALAnBZ-tGUZ4Qg-si-myNlqOGOyFkAEEx52RhvAQUuisNCsNJixU/exec">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm text-neutral-400 mb-2" for="name">Name</label>
+                            <input id="name" name="name" type="text" required
+                                class="w-full bg-black/40 border border-neutral-700 rounded-lg px-4 py-3 text-neutral-100 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-white/40" placeholder="Your name" />
+                        </div>
+                        <div>
+                            <label class="block text-sm text-neutral-400 mb-2" for="email">Email Address</label>
+                            <input id="email" name="email" type="email" required
+                                class="w-full bg-black/40 border border-neutral-700 rounded-lg px-4 py-3 text-neutral-100 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-white/40" placeholder="you@example.com" />
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <label class="block text-sm text-neutral-400 mb-2" for="subject">Subject</label>
+                        <input id="subject" name="subject" type="text" required
+                            class="w-full bg-black/40 border border-neutral-700 rounded-lg px-4 py-3 text-neutral-100 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-white/40" placeholder="Title of your message" />
+                    </div>
+                    <div class="mt-6">
+                        <label class="block text-sm text-neutral-400 mb-2" for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required
+                            class="w-full bg-black/40 border border-neutral-700 rounded-lg px-4 py-3 text-neutral-100 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-white/40" placeholder="Tell us about your idea..."></textarea>
+                    </div>
+                    <div class="mt-8 flex items-center gap-4">
+                        <button id="contact-submit" type="submit"
+                            class="bg-white text-black font-syncopate font-bold py-3 px-8 rounded-full text-base md:text-lg hover:scale-[1.02] transition-transform duration-200">
+                            Send Message
+                        </button>
+                        <a href="mailto:slit.amazing@gmail.com" class="text-neutral-400 hover:text-white transition-colors">or email: slit.amazing@gmail.com</a>
+                    </div>
+                    <p id="contact-status" class="text-sm mt-4 text-neutral-400"></p>
+                </form>
             </div>
         </footer>
 
@@ -788,6 +823,8 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <!-- EmailJS (optional, configure keys on the form's data-attributes) -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -915,7 +952,7 @@
                 }
             });
 
-            // Approach Section 탭 기능
+            // Approach Section ??기능
             const approachTabs = document.querySelectorAll('.approach-tab');
             const approachContents = document.querySelectorAll('.approach-content');
 
@@ -923,17 +960,17 @@
                 tab.addEventListener('click', () => {
                     const targetTab = tab.getAttribute('data-tab');
                     
-                    // 모든 탭과 콘텐츠에서 active 클래스 제거
+                    // 모든 ??�� 콘텐츠에??active ?�래???�거
                     approachTabs.forEach(t => t.classList.remove('active'));
                     approachContents.forEach(c => c.classList.remove('active'));
                     
-                    // 클릭된 탭과 해당 콘텐츠에 active 클래스 추가
+                    // ?�릭????�� ?�당 콘텐츠에 active ?�래??추�?
                     tab.classList.add('active');
                     document.getElementById(targetTab).classList.add('active');
                 });
             });
 
-            // 이미지 슬라이더 기능
+            // ?��?지 ?�라?�더 기능
             function initImageSlider(container) {
                 const slider = container.querySelector('.image-slider');
                 const prevBtn = container.querySelector('.image-prev');
@@ -947,7 +984,7 @@
                     const translateX = -currentSlide * 100;
                     slider.style.transform = `translateX(${translateX}%)`;
                     
-                    // 도트 업데이트
+                    // ?�트 ?�데?�트
                     dots.forEach((dot, index) => {
                         dot.classList.toggle('active', index === currentSlide);
                         dot.classList.toggle('bg-white/80', index === currentSlide);
@@ -970,7 +1007,7 @@
                     updateSlider();
                 }
                 
-                // 이벤트 리스너
+                // ?�벤??리스??
                 nextBtn.addEventListener('click', nextSlide);
                 prevBtn.addEventListener('click', prevSlide);
                 
@@ -978,11 +1015,11 @@
                     dot.addEventListener('click', () => goToSlide(index));
                 });
                 
-                // 자동 슬라이드 (선택사항)
+                // ?�동 ?�라?�드 (?�택?�항)
                 setInterval(nextSlide, 5000);
             }
             
-            // 모든 이미지 슬라이더 초기화
+            // 모든 ?��?지 ?�라?�더 초기??
             document.querySelectorAll('.approach-content').forEach(content => {
                 const imageContainer = content.querySelector('.relative');
                 if (imageContainer) {
@@ -1059,7 +1096,7 @@
             });
 
             // Contact/Footer Animation
-            gsap.from("#contact h2, #contact p, #contact a", {
+            gsap.from("#contact h2, #contact p, #contact form", {
                 opacity: 0,
                 y: 50,
                 stagger: 0.2,
@@ -1070,23 +1107,88 @@
                 }
             });
 
-            // Testimonials Marquee Infinite Loop - GSAP 사용 근본 해결
+
+            // Contact form handler
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                const statusEl = document.getElementById('contact-status');
+                const submitBtn = document.getElementById('contact-submit');
+                const toEmail = contactForm.dataset.toEmail || 'slit.amazing@gmail.com';
+                const pubKey = contactForm.dataset.emailjsPublicKey;
+                const serviceId = contactForm.dataset.emailjsServiceId;
+                const templateId = contactForm.dataset.emailjsTemplateId;
+                const gasEndpoint = contactForm.dataset.gasEndpoint; // Optional Google Apps Script endpoint
+
+                if (pubKey) {
+                    try { emailjs.init({ publicKey: pubKey }); } catch (e) { /* ignore */ }
+                }
+
+                contactForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const formData = new FormData(contactForm);
+                    const name = formData.get('name');
+                    const email = formData.get('email');
+                    const subject = formData.get('subject');
+                    const message = formData.get('message');
+
+                    const payload = {
+                        to_email: toEmail,
+                        from_name: name,
+                        reply_to: email,
+                        subject: subject,
+                        message: message,
+                    };
+
+                    // UI state
+                    submitBtn.disabled = true;
+                    submitBtn.classList.add('opacity-70');
+                    statusEl.textContent = 'Sending...';
+
+                    try {
+                        if (pubKey && serviceId && templateId) {
+                            await emailjs.send(serviceId, templateId, payload);
+                            statusEl.textContent = 'Message sent. We will get back to you soon.';
+                            contactForm.reset();
+                        } else if (gasEndpoint) {
+                            await fetch(gasEndpoint, {
+                                method: 'POST',
+                                mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                                body: JSON.stringify(payload)
+                            });
+                            statusEl.textContent = 'Message sent. We will get back to you soon.';
+                            contactForm.reset();
+                        } else {
+                            // Fallback: open mail client
+                            const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+                            window.location.href = `mailto:${toEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                            statusEl.textContent = 'Opening your email app...';
+                        }
+                    } catch (err) {
+                        console.error(err);
+                        statusEl.textContent = 'Failed to send. Please try again or email us directly.';
+                    } finally {
+                        submitBtn.disabled = false;
+                        submitBtn.classList.remove('opacity-70');
+                    }
+                });
+            }
+            // Testimonials Marquee Infinite Loop - GSAP ?�용 근본 ?�결
             const marqueeWrapper = document.getElementById('marqueeWrapper');
             if (marqueeWrapper) {
                 const firstSet = marqueeWrapper.querySelector('.flex');
                 const clone = firstSet.cloneNode(true);
                 marqueeWrapper.appendChild(clone);
 
-                // GSAP timeline으로 완벽한 무한 루프 구현
+                // GSAP timeline?�로 ?�벽??무한 루프 구현
                 const tl = gsap.timeline({ repeat: -1 });
 
-                // 첫 번째 세트의 너비를 측정
+                // �?번째 ?�트???�비�?측정
                 const setWidth = firstSet.offsetWidth;
 
                 tl.to(marqueeWrapper, {
                     x: -setWidth,
-                    duration: 20, // 20초 동안 이동
-                    ease: "none" // 선형 이동으로 끊김 없음
+                    duration: 20, // 20�??�안 ?�동
+                    ease: "none" // ?�형 ?�동?�로 ?��? ?�음
                 });
             }
         });
@@ -1094,3 +1196,6 @@
 </body>
 
 </html>
+
+
+
