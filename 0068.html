@@ -129,7 +129,9 @@
     <!-- 헤더 / 네비게이션 -->
     <header class="fixed top-0 left-0 w-full p-6 md:p-8 z-50">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="#hero" class="font-syncopate text-2xl font-bold tracking-widest nav-link">VOID</a>
+            <a href="#hero" class="nav-link">
+                <img src="SL_IT.svg" alt="SL-IT" class="h-8 w-auto">
+            </a>
             <nav class="hidden md:flex items-center gap-8 font-syncopate text-sm font-bold">
                 <a href="#manifesto" class="nav-link">MANIFESTO</a>
                 <a href="#works" class="nav-link">WORKS</a>
@@ -144,12 +146,12 @@
         <section id="hero" class="h-screen w-screen relative flex items-center justify-center overflow-hidden">
             <video autoplay loop muted playsinline
                 class="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-40">
-                <source src="https://cdn.midjourney.com/video/8c31b1e5-f7c1-488d-8eb2-3afff61b32a8/0.mp4"
-                    type="video/mp4">
+                <source src="heroback.mp4" type="video/mp4">
             </video>
             <div class="z-10 text-center">
-                <h1 class="font-syncopate text-6xl md:text-9xl lg:text-[10rem] font-bold tracking-wider hero-title">VOID
-                </h1>
+                <div class="hero-title">
+                    <img src="logo.svg" alt="VOID" class="h-48 md:h-64 lg:h-80 xl:h-96 w-auto mx-auto">
+                </div>
                 <p class="text-neutral-300 mt-4 hero-subtitle">Where Ideas Transcend Reality</p>
             </div>
             <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-xs font-syncopate tracking-widest">SCROLL
